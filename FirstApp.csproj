@@ -120,14 +120,23 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CustomerController.cs" />
+    <Compile Include="Controllers\EmployeeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Controllers\RoutingController.cs" />
     <Compile Include="Controllers\SampleController.cs" />
+    <Compile Include="Controllers\Trainee2Controller.cs" />
     <Compile Include="Controllers\TraineeController.cs" />
+    <Compile Include="Controllers\TrainerController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Products.cs" />
     <Compile Include="Models\TraineeDetails.cs" />
+    <Compile Include="Models\TrainerDetail.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModel\Employee.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-grid.css" />
@@ -186,8 +195,28 @@
     <Content Include="Views\Trainee\JsonView.cshtml" />
     <Content Include="Views\Trainee\FileView.cshtml" />
     <Content Include="Views\Trainee\Age.cshtml" />
+    <Content Include="Views\Trainee\TrainerView.cshtml" />
+    <Content Include="Views\Product\Index.cshtml" />
+    <Content Include="Views\Product\Create.cshtml" />
+    <Content Include="Views\Product\Edit.cshtml" />
+    <Content Include="Views\Product\Delete.cshtml" />
+    <Content Include="Views\Product\Details.cshtml" />
+    <Content Include="Views\Shared\_Common_Layout.cshtml" />
+    <Content Include="Views\Employee\Index.cshtml" />
+    <Content Include="Views\Shared\_NavSide.cshtml" />
+    <Content Include="Views\Shared\_TraineeLayout.cshtml" />
+    <Content Include="Views\Shared\_TrainerLayout.cshtml" />
+    <Content Include="Views\Trainee2\Index.cshtml" />
+    <Content Include="Views\Employee\ViewEmployee.cshtml" />
+    <Content Include="Views\Trainee2\ViewTrainee.cshtml" />
+    <Content Include="Views\Trainer\ViewTrainer.cshtml" />
+    <Content Include="Views\Shared\_Task3Layout.cshtml" />
+    <Content Include="Views\Customer\Index.cshtml" />
+    <Content Include="Views\Customer\Name.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Views\Routing\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />
     <Content Include="Content\bootstrap.rtl.css.map" />

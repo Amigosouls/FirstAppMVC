@@ -1,0 +1,33 @@
+﻿@model IEnumerable<FirstApp.Models.TrainerDetail>
+
+@{
+    ViewBag.Title = "TrainerView";
+}
+
+<h2>TrainerView</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>Trainer Name</th>
+        <th>Trainer age</th>
+        <th>Trainer email</th>
+        <th>Options</th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>@item.trainerName</td>
+        <td>@item.trainerAge</td>
+        <td>@item.trainerEmail</td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

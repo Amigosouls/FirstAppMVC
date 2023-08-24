@@ -1,0 +1,44 @@
+﻿@model IEnumerable<FirstApp.Models.Trainee2Details>
+@{
+    Layout = "~/Views/Shared/_TraineeLayout.cshtml";
+}
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table d-inline" >
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TraineeName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TraineeAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TraineeEmail)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TraineeName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TraineeAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TraineeEmail)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>
+@section TraineeFooter{
+    <h3 class="bg-dark text-light p-5" >I'm the footer of Trainee using section</h3>
+    }

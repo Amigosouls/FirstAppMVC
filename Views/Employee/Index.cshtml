@@ -1,0 +1,15 @@
+﻿<h3>View data Content</h3>
+
+@foreach(var data in ViewData)
+            {
+                <h3>@data.Value</h3>
+            }
+
+
+<h2 class="mt-5 ms-5 ps-5">The Various Skill Set are</h2>
+<ul style="margin-left:150px;">
+    @foreach (var str in ViewBag.SkillSet)
+    {
+        <li>@str</li>
+    }
+</ul>

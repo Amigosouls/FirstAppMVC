@@ -17,6 +17,12 @@ namespace FirstApp.Controllers
             new TraineeDetails("Srikanth","20","srikanth@123"),
             new TraineeDetails("Siva","22","siva@223")
         };
+
+        IList<TrainerDetail> trainerDetails = new List<TrainerDetail>
+        {
+            new TrainerDetail("Thangam ArulSeeli","40","thangam@123"),
+            new TrainerDetail("Pallavi","35","pallavi@223")
+        };
         public ActionResult TraineeView(int? id)
         {
             if (id == 1)
@@ -25,7 +31,8 @@ namespace FirstApp.Controllers
             }
             else if (id==2)
             {
-                return View(traineeDetails);
+                return RedirectToAction("TrainerView", "Trainee",new { });
+                
             }
             else
             {
@@ -33,6 +40,10 @@ namespace FirstApp.Controllers
             }
         }
 
+        public ActionResult TrainerView()
+        {
+            return View(trainerDetails);
+        }
         public JsonResult JsonView()
         {
             var trainee = new List<TraineeDetails>
@@ -50,10 +61,15 @@ namespace FirstApp.Controllers
             return File("~/App_Data/Info.docx", "text/plain");
         }
 
-        public JavaScriptResult AgeCalculate()
+        public JavaScriptResult AgeCalculate(int id)
         {
-            var page = $"var myage ='Hey bro'; console.log('kidu') ";
-            return new JavaScriptResult() { Script = page.ToString() };
+            // 
+            //var page = "<div id='showAge'></div> Enter Age:<input type='number' id='age'> <button>Calc Age</button> <script> </script>";
+            
+            int year =System.DateTime.Now.Year;
+            var page = "$(document).ready(function () {$('#showAge').html('Your Age is ' + ("+(year - id)+"))});";
+            
+            return new JavaScriptResult() { Script = page };
         }
 
         public ActionResult Age()

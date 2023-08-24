@@ -1,0 +1,20 @@
+﻿
+
+<style>
+    #menu {
+        width: 150px;
+        height:100vh;
+        background-color:black;
+        color:white;
+        text-decoration:none;
+        list-style-type:none;
+        float:left;
+    }
+    
+</style>
+<ul id="menu">
+    <li>@Html.ActionLink("Home", "Index", "Employee", new { area = "" }, new { @class = "nav-link" })</li>
+    <li>@Html.ActionLink("Trainee", "ViewTrainee", "Trainee2", new { area = "" }, new { @class = "nav-link" })</li>
+    <li>@Html.ActionLink("Trainer", "ViewTrainer", "Trainer", new { area = "" }, new { @class = "nav-link" })</li>
+    <li>@Html.ActionLink("Employee", "ViewEmployee", "Employee", new { area = "" }, new { @class = "nav-link" })</li>
+</ul>

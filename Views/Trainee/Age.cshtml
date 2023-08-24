@@ -3,12 +3,18 @@
     ViewBag.Title = "Age";
 }
 
-<h2>Age2</h2>
+
+<h3> Age  page</h3>
+<h5>Enter Your Year of Birth</h5>
+<div id="showAge" ></div>
+<input id="age" class="form-control" />
+<button class="btn btn-info">Find Age</button>
 <script src="~/Scripts/jquery-3.4.1.js"></script>
 <script>
+    
     $(document).ready(function () {
-        console.log("hey")
-        $.getScript(`/Trainee/AgeCalculate`);
+        console.log("hey");
+        $("button").click(function () { $.getScript("/Trainee/AgeCalculate/" + document.getElementById('age').value); })
     });
 
 </script>

@@ -17,4 +17,12 @@ namespace FirstApp.Models
             this.traineeEmail = email;
         } 
     }
+    public class Trainee2Details
+    {
+        public string TraineeName { get; set; }
+        public string TraineeAge { get; set; }
+        public string TraineeEmail { get; set; }
+
+    }
+
 }

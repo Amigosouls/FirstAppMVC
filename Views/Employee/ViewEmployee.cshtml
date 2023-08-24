@@ -1,0 +1,33 @@
+﻿@model FirstApp.ViewModel.Employee
+    @{ 
+        Layout = "~/Views/Shared/_Common_Layout.cshtml";
+    }
+    <table class="table table-dark d-inline w-100" border="1">
+        <caption>Trainer Details</caption>
+        <tr>
+            <th>Trainer name</th>
+            <th>Trainer Age</th>
+            <th>Trainer Email</th>
+        </tr>
+        <tr>
+            <td>@Model.Trainer2Detail.TrainerName</td>
+            <td>@Model.Trainer2Detail.TrainerAge</td>
+            <td>@Model.Trainer2Detail.TrainerEmail</td>
+        </tr>
+
+    </table>
+
+    <table class="table mt-5 table-dark d-inline w-100" border="1">
+        <caption>Trainee Details</caption>
+        <tr>
+            <th>Trainee name</th>
+            <th>Trainee Age</th>
+            <th>Trainee Email</th>
+        </tr>
+        <tr>
+            <td>@Model.Trainee2Details.TraineeName</td>
+            <td>@Model.Trainee2Details.TraineeAge</td>
+            <td>@Model.Trainee2Details.TraineeEmail</td>
+        </tr>
+
+    </table>
